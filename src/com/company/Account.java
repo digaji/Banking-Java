@@ -15,8 +15,8 @@ public class Account {
 
     // Methods
     public boolean deposit(double amt) {
-        // Checks if total balance will be greater than the max value of the double data type
-        if ((this.balance + amt) > Double.MAX_VALUE) {
+        // Checks if amount deposited is greater than 0
+        if (amt < 0) {
             return false;
         } else {
             this.balance += amt;
